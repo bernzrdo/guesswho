@@ -1,11 +1,11 @@
-var id,loaded=0;
+var id,loaded=0,miniId;
 
 function load(c){
     var img=new Image();
     img.onload=function(){
         loaded++;
         $('#game').append('<img title="'+c+'" src="https://robohash.org/'+c+'.png?set=set5&size=250x250">');
-        $('#loading').text(Math.round(loaded*6.25)+'%');
+        $('#loading').text(Math.round(loaded*6.25)+'% ['+miniId+']');
         if(loaded==16){
             $('#loading').fadeOut();
             $('#game').fadeIn();
@@ -24,6 +24,7 @@ $(function(){
         $('#loading').fadeIn();
         var d=new Date().getTime().toString();
         id=md5(d.substring(0,d.length-4));
+        miniId=d.substring(8,9);
         console.log("Game ID: "+id);
         $('#game').html('');
         var chars=id.match(/.{1,2}/g),html='';
