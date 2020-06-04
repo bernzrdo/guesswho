@@ -63,7 +63,7 @@ $(()=>{
         $('#game').addClass('off');
         $(this).addClass('show');
     });
-    $(window).click(()=>{
+    $(document).click(()=>{
         if($('#myChar').hasClass('show')){
             $('#myChar').removeClass('show');
             $('#game').removeClass('off');
