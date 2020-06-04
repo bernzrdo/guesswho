@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Guess Who</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha512/0.8.0/sha512.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div id="menu">
+            <span class="logo">GUESS WHO?</span><br>
+            <div class="seed">
+                <input placeholder="Game Seed" autofocus>
+                <img class="random" draggable="false" src="assets/random.svg">
+                <img class="go" draggable="false" src="assets/go.svg">
+            </div><br>
+            <span class="info">The game seed defines what characters show up. Both players have to use the same seed.</span>
+        </div>
+        <div id="loading" class="off"><span class="progress">0</span>%</div>
+        <div id="pick" class="off">
+            <span>Pick your character:</span>
+            <div></div>
+        </div>
+        <img id="myChar" class="off">
+        <div id="game" class="off">
+            <div></div>
+            <span>Click to show/hide a character</span>
+        </div>
+    </body>
+</html>
